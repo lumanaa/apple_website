@@ -1,0 +1,27 @@
+@import '/src/index.scss';
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  .navbar {
+    display: flex;
+    width: 100%;
+    .nav-1 {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      @include respond-to(small){
+        display: none;
+      }
+    }
+  }
+  .screen-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+  }
+}
