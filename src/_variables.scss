@@ -104,13 +104,26 @@ $main: "Poppins", sans-serif;
 }
 @mixin common-padding {
   padding: 5rem 1.25rem;
-  @include respond-to(small){
+  @include respond-to(small) {
     padding: 8rem 2.5rem;
   }
 }
-@mixin screen-max-width{
+@mixin screen-max-width {
   margin-inline-start: auto;
   margin-inline-end: auto;
   position: relative;
   max-width: 1120px;
+}
+@mixin section-heading {
+  color: gray;
+  max-width: 768px;
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 600;
+  transform: translateY(5rem);
+  opacity: 0;
+  @include respond-to(medium) {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
 }
