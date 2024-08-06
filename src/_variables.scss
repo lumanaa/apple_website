@@ -8,13 +8,15 @@ $gray-100: #94928d;
 $gray-200: #afafaf;
 $gray-300: #42424570;
 
+$main: "Poppins", sans-serif;
+
 @mixin flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @mixin nav-height {
-  height: calc(100vh-60px);
+  height: calc(100vh - 60px);
 }
 @mixin btn {
   padding: 0.25rem 1.25rem;
@@ -22,8 +24,11 @@ $gray-300: #42424570;
   background-color: $blue;
   margin: 1.25rem;
   border: 1px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid;
   border-color: transparent;
-  :hover {
+  &:hover {
     background-color: transparent;
     border-color: $blue;
     color: $blue;
@@ -97,4 +102,15 @@ $gray-300: #42424570;
   color: $gray-100;
   opacity: 0;
 }
-
+@mixin common-padding {
+  padding: 5rem 1.25rem;
+  @include respond-to(small){
+    padding: 8rem 2.5rem;
+  }
+}
+@mixin screen-max-width{
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}

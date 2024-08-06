@@ -1,11 +1,18 @@
-$breakpoint-small: 576px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 992px;
-$breakpoint-xlarge: 1200px;
+$breakpoint-xsmall: 36em;
+$breakpoint-small: 48em;
+$breakpoint-medium: 62em;
+$breakpoint-large: 75em;
+$breakpoint-xlarge: 88em;
+$breakpoint-4k: 160em;
 
-// _mixins.scss
-@mixin respond-to($breakpoint) {
-    @if $breakpoint == small {
+
+@mixin respond-to($breakpoint, $type: max) {
+  @if $type == max {
+    @if $breakpoint == xsmall {
+      @media (max-width: $breakpoint-xsmall) {
+        @content;
+      }
+    } @else if $breakpoint == small {
       @media (max-width: $breakpoint-small) {
         @content;
       }
@@ -22,5 +29,28 @@ $breakpoint-xlarge: 1200px;
         @content;
       }
     }
+    
+  } @else if $type == min {
+    @if $breakpoint == xsmall {
+      @media (min-width: $breakpoint-xsmall) {
+        @content;
+      }
+    } @else if $breakpoint == small {
+      @media (min-width: $breakpoint-small) {
+        @content;
+      }
+    } @else if $breakpoint == medium {
+      @media (min-width: $breakpoint-medium) {
+        @content;
+      }
+    } @else if $breakpoint == large {
+      @media (min-width: $breakpoint-large) {
+        @content;
+      }
+    } @else if $breakpoint == xlarge {
+      @media (min-width: $breakpoint-xlarge) {
+        @content;
+      }
+    }
   }
-  
+}

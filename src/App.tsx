@@ -1,6 +1,6 @@
 import "./App.scss";
-import Hero from "./components/Hero";
-import Highlights from "./components/Highlights";
+import Hero from "./components/Hero/Hero";
+import Highlights from "./components/Highlights/Highlights";
 import Navbar from "./components/Navbar";
 
 const App = () => {
