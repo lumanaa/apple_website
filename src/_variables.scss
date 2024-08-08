@@ -128,13 +128,14 @@ $main: "Poppins", sans-serif;
   }
 }
 
-@mixin video-carousel_container{
-  position: relative;
-  width: 88vw;
-  height: 35vh;
+@mixin video-carousel-container{
+  position: relative; /* Equivalent to Tailwind's 'relative' */
+  width: 88vw; /* Default width */
+  height: 45vh; /* Default height */
+  
   @include respond-to(small){
-    height: 50vh;
     width: 70vw;
+    height: 50vh;
   }
   @include respond-to(medium){
     height: 70vh;
