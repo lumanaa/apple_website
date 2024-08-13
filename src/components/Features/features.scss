@@ -1,0 +1,93 @@
+@import "/src/index.scss";
+
+.feature-page {
+  height: 100%;
+  background-color: $zinc;
+  position: relative;
+  overflow: hidden;
+  @include common-padding;
+  .screen {
+    @include screen-max-width;
+    .container {
+      margin-bottom: 3rem;
+      width: 100%;
+      #features_title {
+        @include section-heading;
+      }
+    }
+    .items-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .items {
+        margin-top: 8rem;
+        margin-bottom: 6rem;
+        padding-left: 6rem;
+        .title {
+          font-size: 3rem; /* 48px */
+          line-height: 1;
+          font-weight: 600;
+          @include respond-to(medium, min) {
+            font-size: 4.5rem; /* 72px */
+            line-height: 1;
+          }
+        }
+      }
+      .animated-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include respond-to(small, min) {
+          padding: 0 2.5rem;
+        }
+        .content-pos {
+          position: relative;
+          height: 50vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+        .img-container {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+          .images {
+            @include feature-video-container;
+            .img {
+              overflow: hidden;
+              flex: 1;
+              height: 50vh;
+              img{
+                @include feature-video;
+              }
+            }
+          }
+          .final{
+            @include feature-text-container;
+            .text-container{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p{
+                    @include feature-text;
+                }
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+}

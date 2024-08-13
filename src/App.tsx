@@ -1,4 +1,5 @@
 import "./App.scss";
+import Features from "./components/Features/Features";
 import Hero from "./components/Hero/Hero";
 import Highlights from "./components/Highlights/Highlights";
 import Model from "./components/Model/Model";
@@ -12,6 +13,7 @@ const App = () => {
         <Hero />
         <Highlights />
         <Model/>
+        <Features/>
       </main>
     </>
   );

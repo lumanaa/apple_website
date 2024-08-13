@@ -8,6 +8,7 @@
   @include common-padding;
   .h-body {
     @include screen-max-width;
+    max-width: 1600px;
     .h-container {
       margin-bottom: 3rem;
       width: 100%;
