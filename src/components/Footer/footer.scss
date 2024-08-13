@@ -1,0 +1,46 @@
+@import "/src/index.scss";
+
+.footer-section {
+  padding: 1.25rem;
+  @include respond-to(small, min) {
+    padding: 0 2.5rem;
+  }
+  .footer-screen {
+    @include screen-max-width;
+    .part-one {
+      font-weight: 500;
+      color: gray;
+      font-size: small;
+      .span-one {
+        text-decoration: underline;
+        color: rgb(94, 134, 243);
+      }
+      .link-span {
+        margin: 0 0.5rem;
+      }
+    }
+    .call {
+      font-weight: 500;
+      color: gray;
+      font-size: small;
+    }
+    .divider {
+      background-color: gray;
+      height: 1px;
+      margin: 1.25rem 0;
+      width: 100%;
+    }
+  }
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond-to(small, min) {
+      flex-direction: row;
+      align-items: center;
+    }
+    .links {
+      display: flex;
+    }
+  }
+}
