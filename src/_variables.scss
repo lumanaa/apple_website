@@ -105,7 +105,7 @@ $main: "Poppins", sans-serif;
   @include respond-to(small, min) {
     font-size: larger;
   }
-  .span-text{
+  .span-text {
     color: white;
   }
 }
@@ -199,4 +199,70 @@ $main: "Poppins", sans-serif;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+@mixin hiw-title {
+  font-size: x-large;
+  font-weight: 600;
+  text-align: center;
+  @include respond-to(small, min) {
+    font-size: xx-large;
+  }
+}
+@mixin hiw-subtitle {
+  color: gray;
+  font-weight: 600;
+  font-size: large;
+  padding: 2rem 0;
+  text-align: center;
+  @include respond-to(small, min) {
+    font-size: larger;
+  }
+}
+
+@mixin hiw-video {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  border-radius: 56px;
+  overflow: hidden;
+}
+
+@mixin hiw-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8rem;
+  @include respond-to(small, min) {
+    flex-direction: row;
+
+  }
+}
+
+@mixin hiw-text {
+  color: gray;
+  font-size: large;
+  font-weight: normal;
+  margin: 0.5rem 0;
+  @include respond-to(small, min) {
+    font-weight: 600;
+  }
+}
+
+@mixin hiw-bigtext {
+  color: white;
+  font-size: x-large;
+  font-weight: normal;
+  margin: 0.5rem 0;
+  @include respond-to(small, min) {
+    font-weight: 600;
+    font-size: xx-large;
+    font-weight: 500;
+  }
+}
+
+@mixin g_fadeIn{
+  opacity: 0;
+  transform: translateY(100px);
 }
